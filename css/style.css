@@ -4,16 +4,25 @@ body {
     font-family: "Courier New", monospace;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .terminal {
     width: 80%;
     margin: 50px auto;
     border: 2px solid #00ff00;
-    padding: 20px;
+    padding: 35px;
     background-color: #000;
     box-shadow: 0 0 10px #00ff00;
-    text-align: left;
+    flex: 1;
+}
+h1 {
+    font-family: monospace;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 a {
     color: #00ff00;
@@ -24,4 +33,28 @@ a:hover {
 }
 .prompt {
     color: #ff0000;
+}
+.ascii-art {
+    display: block;
+    text-align: center;
+}
+.mobile-title {
+    display: none;
+}
+footer {
+    text-align: center;
+    background-color: #000;
+    margin-top: auto;
+}
+@media (max-width: 992px) { /* Ajuste o ponto de quebra para metade da tela */
+    .ascii-art {
+        display: none;
+    }
+    .mobile-title {
+        display: block;
+    }
+    .terminal {
+        width: 95%;
+        padding: 10px;
+    }
 }
